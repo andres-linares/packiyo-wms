@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Packiyo WMS (Warehouse Management System)
 
-## Getting Started
+## Features
 
-First, run the development server:
+**Notes**: Per email message, only the following features will be implemented (_"Include features such as product listing, order creation, and order details display."_)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Container `/*`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [ ] App Header
+  - Contains a Packiyo logo, 2 links for Products and Orders and an avatar with the user ID
+- [ ] App Footer
+  - Logo with a redirect to Packiyo's website
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Landing Page `/`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [ ] (Page) Home
+  - Welcome message
+  - A brief description of the app
+  - A button that redirects to the products page
 
-## Learn More
+### Product Features `/products`
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] (Page) Home
+  - Ecommerce-like products listing displaying 100 products per page
+  - Interactive products that when clicked will redirect to their `/show` page
+  - There should be a button that lets you create an order with the product
+- [ ] (Page) Show
+  - Ecommerce-like product page with attributes listing and description
+  - There should be a button that lets you add the product to a new order
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Order Features `/orders`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] (Page) Home
+  - Ecommerce-like orders listing displaying 100 orders per page
+  - Interactive orders that when clicked will redirect to their `/show` page
+- [ ] (Page) Show
+  - Ecommerce-like order page with attributes listing and description
+  - When possible display the products that are part of the order and the customer's information
+- [ ] (Page) Create
+  - Form to create a new order where it's possible to add products to the order.
+  - The form should let you fill all the data that is needed by the API but for the sake of simplicity, we will only ask for the products that are part of the order and the rest of the data will be mocked.
