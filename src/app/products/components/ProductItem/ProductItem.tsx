@@ -22,16 +22,21 @@ export default function ProductItem({ product }: Props) {
   return (
     <Card>
       <CardActionArea onClick={() => router.push(`/products/${product.id}`)}>
-        <CardMedia component="img" />
+        <CardMedia
+          component="img"
+          src="/product-placeholder.webp" // TODO: use product image
+          height="100"
+        />
         <CardContent>
           <Typography variant="h5">{product.attributes.name}</Typography>
-          <Typography variant="body1">
+          <Typography variant="h6">{product.attributes.sku}</Typography>
+          <Typography variant="body2">
             {product.attributes.custom_description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="secondary">
           Create Order
         </Button>
       </CardActions>
