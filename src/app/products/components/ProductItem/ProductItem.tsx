@@ -18,7 +18,11 @@ interface Props {
 export default function ProductItem({ product }: Props) {
   return (
     <Card>
-      <CardActionArea LinkComponent={Link} href={`/products/${product.id}`}>
+      <CardActionArea
+        LinkComponent={Link}
+        href={`/products/${product.id}`}
+        aria-label={`${product.attributes.name} product page`}
+      >
         <CardMedia
           component="img"
           src="/product-placeholder.webp" // TODO: use product image
@@ -26,9 +30,7 @@ export default function ProductItem({ product }: Props) {
           alt={product.attributes.name}
         />
 
-        <CardContent
-          sx={{ borderTop: "1px solid", borderColor: "primary.300" }}
-        >
+        <CardContent sx={{ borderTop: "1px solid", borderColor: "primary.300" }}>
           <Box sx={{ mb: "0.75rem" }}>
             <Typography
               variant="h5"
@@ -47,11 +49,7 @@ export default function ProductItem({ product }: Props) {
       </CardActionArea>
 
       <CardActions>
-        <Button
-          size="small"
-          color="secondary"
-          href={`/orders/new?product=${product.id}`}
-        >
+        <Button size="small" color="secondary" href={`/orders/new?product=${product.id}`}>
           Create Order
         </Button>
       </CardActions>
