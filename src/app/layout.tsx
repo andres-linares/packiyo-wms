@@ -7,6 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 export const metadata: Metadata = {
   title: "WMS | Packiyo",
   description: "Packiyo WMS by Andres Linares",
+  icons: ["/favicon.png"],
 };
 
 export default function RootLayout({

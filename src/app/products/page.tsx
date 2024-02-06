@@ -3,6 +3,11 @@ import { getProducts } from "./api";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { ProductItem } from "./components";
 import { PageHeading } from "@/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Products | Packiyo",
+};
 
 export default async function ProductsPage() {
   const products = await getProducts();
