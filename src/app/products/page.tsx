@@ -29,13 +29,17 @@ export default async function ProductsPage() {
         </Box>
       </Typography>
 
-      <Grid2 container spacing={{ xs: 1, sm: 2, md: 3 }} sx={{ mt: 2 }}>
-        {products.data.map((product) => (
-          <Grid2 key={product.id} xs={12} sm={6} md={4} lg={3} xl={2}>
-            <ProductItem product={product} />
-          </Grid2>
-        ))}
-      </Grid2>
+      {products.data.length === 0 ? (
+        <Typography>No Products Found</Typography>
+      ) : (
+        <Grid2 container spacing={{ xs: 1, sm: 2, md: 3 }} sx={{ mt: 2 }}>
+          {products.data.map((product) => (
+            <Grid2 key={product.id} xs={12} sm={6} md={4} lg={3} xl={2}>
+              <ProductItem product={product} />
+            </Grid2>
+          ))}
+        </Grid2>
+      )}
 
       <Stack direction="row" justifyContent="flex-end" sx={{ mt: 5, mb: 3 }}>
         <Pagination
