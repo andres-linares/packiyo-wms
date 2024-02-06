@@ -1,4 +1,4 @@
-import { query } from "../fetcher";
+import { query } from "@/fetcher";
 import { ProductsResponse } from "./types";
 
 const getProducts = () => {
